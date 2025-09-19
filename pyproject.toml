@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finance-app"
+version = "0.1.0"
+description = "Aplicativo simples de finanças pessoais para registrar entradas e saídas."
+readme = "README.md"
+authors = [{name = "Example", email = "example@example.com"}]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+finance-app = "finance_app.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
